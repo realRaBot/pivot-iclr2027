@@ -2,12 +2,10 @@
 
 Anonymous code artifact for ICLR 2027 submission 8150 (PIVOT).
 
-Canonical code repository: https://github.com/realRaBot/pivot-iclr2027
+Review copy: [anonymous repository](https://anonymous.4open.science/r/pivot-anon-iclr2027/README.md).
 
-```bash
-git clone https://github.com/realRaBot/pivot-iclr2027.git
-cd pivot-iclr2027
-```
+Download the code archive from the anonymous repository and extract it locally.
+Run the commands below from the extracted directory containing `pyproject.toml`.
 
 PIVOT combines a tensor-native implementation of Jäckel's
 *Let's Be Rational* (LBR) forward solve with a custom implicit backward,
