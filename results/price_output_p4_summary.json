@@ -1,0 +1,14 @@
+{
+  "protocol": "price-output model, matched seeds 1/2/3, 100 epochs, lambda_iv=0.1, tau=1e-6",
+  "pivot": [
+    {"seed": 1, "price_mae": 2.5366151333, "iv_mae": 0.0169575740, "nan_gradient_steps": 0},
+    {"seed": 2, "price_mae": 2.3692946434, "iv_mae": 0.0146770701, "nan_gradient_steps": 0},
+    {"seed": 3, "price_mae": 2.5220894814, "iv_mae": 0.0177242931, "nan_gradient_steps": 0}
+  ],
+  "same_jackel_forward_generic_ift": [
+    {"seed": 1, "price_mae": 1957.8310546875, "iv_mae": 4.8670925066, "nan_gradient_steps": 1997},
+    {"seed": 2, "price_mae": 669.5825805664, "iv_mae": 1.7696483641, "nan_gradient_steps": 2000},
+    {"seed": 3, "price_mae": 2.4962368011, "iv_mae": 0.0175511932, "nan_gradient_steps": 0}
+  ],
+  "note": "The same-forward control isolates PIVOT's invalid/low-vega backward contract from Jaeckel forward quality."
+}

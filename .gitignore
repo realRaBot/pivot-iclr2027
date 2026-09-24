@@ -1,0 +1,37 @@
+# Python environments, caches, and builds
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.cache/
+.coverage*
+htmlcov/
+# Local credentials and editor/OS metadata
+.env
+.env.*
+!.env.example
+.pypirc
+*.pem
+*.key
+.streamlit/secrets.toml
+.DS_Store
+Icon?
+._*
+.idea/
+.vscode/
+.ipynb_checkpoints/
+# Generated runs and licensed or generated datasets
+wandb/
+*.log
+slurm-*.out
+experiments/**/prepared/
+experiments/**/runs/
+experiments/**/logs/
+experiments/**/outputs/

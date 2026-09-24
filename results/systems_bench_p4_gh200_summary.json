@@ -1,0 +1,57 @@
+{
+  "hardware": "NVIDIA GH200 120GB",
+  "torch": "2.11.0+cu126",
+  "protocol": {
+    "batch": 10000000,
+    "dtype": "float32",
+    "newton_iterations": 20,
+    "timing": "median of 7 synchronized repetitions after 2 warmups"
+  },
+  "rows": [
+    {
+      "method": "pivot",
+      "forward_ms": 6.995,
+      "forward_backward_ms": 12.461,
+      "peak_memory_mb": 2233.4,
+      "iv_max_abs_error": 9.13398623036965e-06,
+      "iv_mean_abs_error": 6.269037081054374e-08,
+      "gradient_mean_relative_error": 0.011471825518585775,
+      "invalid_rows_flagged": 684954
+    },
+    {
+      "method": "same_jackel_forward_generic_ift",
+      "forward_ms": 6.994,
+      "forward_backward_ms": 10.832,
+      "peak_memory_mb": 1784.3,
+      "iv_max_abs_error": 9.13398623036965e-06,
+      "iv_mean_abs_error": 6.269037081054374e-08,
+      "gradient_mean_relative_error": 0.011472103572550919,
+      "invalid_rows_flagged": 684954
+    },
+    {
+      "method": "unrolled_newton_20",
+      "forward_ms": 36.575,
+      "forward_backward_ms": 85.267,
+      "peak_memory_mb": 14477.7,
+      "iv_max_abs_error": 0.49989837969690887,
+      "iv_mean_abs_error": 0.012134458092269842,
+      "gradient_mean_relative_error": 0.03974588176869439,
+      "invalid_rows_flagged": 0
+    },
+    {
+      "method": "newton_forward_generic_ift",
+      "forward_ms": 36.591,
+      "forward_backward_ms": 40.422,
+      "peak_memory_mb": 1239.8,
+      "iv_max_abs_error": 0.49989837969690887,
+      "iv_mean_abs_error": 0.012134458092269842,
+      "gradient_mean_relative_error": 19823983352681.94,
+      "invalid_rows_flagged": 0
+    }
+  ],
+  "finite_difference_validation": {
+    "n": 1679,
+    "mean_relative_error": 1.1534540467234574e-06,
+    "max_relative_error": 0.0006236227230375888
+  }
+}

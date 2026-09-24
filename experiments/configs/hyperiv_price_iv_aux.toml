@@ -1,0 +1,54 @@
+name = "hyperiv_price_iv_aux"
+experiment_root = "experiments/hyperiv_price_iv_aux"
+
+[training]
+seeds = [1, 2, 3]
+batch_size = 8
+contracts_per_interval = 32
+epochs = 100
+optimizer = "Adam"
+learning_rate = 0.001
+dtype = "float32"
+eval_dtype = "float64"
+
+[variants.vanilla]
+use_price_aux = false
+use_roundtrip_aux = false
+use_direct_iv_aux = false
+use_vega_gate = false
+sentinel_replacement = false
+
+[variants.price_aux]
+use_price_aux = true
+use_roundtrip_aux = false
+use_direct_iv_aux = false
+use_vega_gate = false
+sentinel_replacement = false
+
+[variants.price_rt_aux]
+use_price_aux = true
+use_roundtrip_aux = true
+use_direct_iv_aux = false
+use_vega_gate = true
+sentinel_replacement = true
+
+[variants.price_direct_iv_aux]
+use_price_aux = true
+use_roundtrip_aux = false
+use_direct_iv_aux = true
+use_vega_gate = true
+sentinel_replacement = true
+
+[variants.unsafe_rt_control]
+use_price_aux = true
+use_roundtrip_aux = true
+use_direct_iv_aux = false
+use_vega_gate = false
+sentinel_replacement = false
+diagnostic_only = true
+
+[wandb]
+mode = "disabled"
+project = "pivot-anon"
+log_grad_every_step = 0
+log_param_hist_every_epoch = 0
